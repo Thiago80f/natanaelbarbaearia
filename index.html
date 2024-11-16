@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Natan Cortes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: url('Barbearia Natan Cortes.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: rgba(38, 0, 255, 0.9);
+            color: #f5b506;
+            text-align: center;
+            padding: 1rem;
+            animation: slideDown 1s ease-out;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(14, 12, 12, 0.9);
+            animation: fadeIn 1s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+        nav a {
+            color: #00fa3e;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1rem;
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 200px;
+            margin: 0.5rem;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #01e1ff;
+            color: #000000;
+            text-align: center;
+            padding: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #e70000;
+            border-radius: 5px;
+        }
+        button {
+            padding: 0.5rem;
+            background-color: #dbff0f;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #c4c4c4;
+            color: #b30000;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(230, 6, 6, 0.1);
+            cursor: pointer;
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .whatsapp-button img {
+            width: 25px;
+            height: 25px;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                max-width: 150px;
+            }
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Barbearia Natan Cortes</h1>
+    </header>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Galeria</a>
+        <a href="#">Depoimentos</a>
+        <a href="#">Agendamento</a>
+        <a href="#">Promoções</a>
+    </nav>
+    <section>
+        <h2>Bem-vindo à Barbearia Natan Cortes</h2>
+        <p>Oferecemos os melhores cortes de cabelo e serviços de barbearia da cidade.</p>
+    </section>
+    <section>
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="sddefault.jpg" alt="Imagem 1">
+            <img src="corte-de-cabelo-masculino-2024..jpeg" alt="Imagem 2">
+            <img src="WhatsApp Image 2024-11-16 at 18.54.11.jpeg" alt="Imagem 3">
+        </div>
+    </section>
+    <section>
+        <h2>Depoimentos</h2>
+        <p>"Melhor barbearia da cidade! - cliente Thiago"</p>
+        <p>"Serviço excelente e profissionais qualificados. - cliente Edimilson "</p>
+    </section>
+    <section>
+        <h2>Agendamento</h2>
+        <form action="https://formspree.io/f/xrbglzqa" method="POST">
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
+            <textarea id="mensagem" name="mensagem" placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section>
+        <h2>Promoções</h2>
+        <p>Confira nossas promoções especiais para novos clientes!</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 ee Barbearia Natan Cortes. Todos os direitos reservados.</p>
+    </footer>
+    <button class="whatsapp-button" onclick="window.location.href='https://wa.me/5535998329854'">
+        <img src="download.png" alt="WhatsApp">
+    </button>
+</body>
+</html>
